@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kai's Portfolio Site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--link rel="shortcut icon" href="http://wikipedia.com/static/favicon/wikipedia.ico">-->
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<!--normalize.css must be placed above style.scc otherwise style.css will be overwritten (Browser reads from top to bottom)-->
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
+<body>
+	<header class="page-header"> <!--flexbox parent container-->
+		<img src="img/KE Logo.png" alt="logo" class="page-header__item">
+		<nav class="main navigation page-header__item">
+			<ul role="menubar" class="navigation-list">
+				 <li role="presentation" >
+					 <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+				  </li>
+				  <li role="presentation">
+					  <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
+				  </li>
+				  <li role="presentation">
+					  <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+				  </li>
+          <li role="presentation">
+ 					 <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+ 				 </li>
+			 </ul>
+     </nav>
+   </header>
+
+   <!-- Main content -->
+<section>
+   <h1>Work</h1>
+   <div class="grid">
+      <!-- Grid items will live here -->
+      <div class="grid__item">
+          <h2>Mobile web app</h2>
+          <p>Within this project I was responsible for the front-end. It's written in React.js.
+            Additionally I've created the HTML and CSS templates.
+          </p>
+          <a href="#">See project on GitHub</a>
+      </div>
+      <div class="grid__item">
+          <h2>Native MacOS application</h2>
+          <p>Within this project I was responsible for the front-end. It is written in JavaFX.
+          </p>
+          <a href="#">See project on GitHub</a>
+      </div>
+      <div class="grid__item">
+          <h2>Node.js pdf generation</h2>
+          <p>Within this project I created a service that generates pdf out of webpages
+            with the help of node.js server.
+          </p>
+          <a href="#">See project on GitHub</a>
+      </div>
+      <div class="grid__item">
+          <h2>Styleguide for portfolio page</h2>
+          <p>Here you can find the styleguide I created for this portfolio page.
+            It was created with the livingstyleguide gem and grunt.
+          </p>
+          <a href="#">See styleguide</a>
+      </div>
+      <div class="grid__item">
+          <h2>Medium blog</h2>
+          <p>I am also writing on medium.com about React.js
+          </p>
+          <a href="#">Read my latest blogpost</a>
+      </div>
+      <div class="grid__item">
+          <h2>Your project?</h2>
+          <p>I can help in realizing front-end and back-end projects with the following technologies:
+            React.js, JavaScript, Java, JavaFX, HTML and CSS. I am also happy to learn other technologies
+            if needed.
+          </p>
+          <a href="#">Contact me</a>
+      </div>
+
+   </div>
+</section>
+
+	 <footer class="page-footer">
+  	 <p>Find me on</p>
+		 <div class="social-media">
+		 <!--<img src="http://via.placeholder.com/30x30" alt="Github">-->
+		 <a href="https://github.com/CareerFoundry" role="githubprofile" target="_blank">
+			 <img src="img/iconfinder_github-social-media_765246.png" height="30px" width="30px" alt="link to github"></img></a>
+  	 <!--<img src="http://via.placeholder.com/30x30" alt="Twitter">-->
+		 <a href="https://twitter.com/careerfoundry" role="twitteraccount" target="_blank">
+  		 <img src="img/iconfinder_2_twitter_2609552.png" height="30px" width="30px" alt="link to twitter"></img></a>
+  	 <!--<img src="http://via.placeholder.com/30x30" alt="LinkedIn">-->
+		 <a href="https://de.linkedin.com/school/careerfoundry/?challengeId=AQEwM8yGIgAwKAAAAXNyWr4kFI5G-tKgSxPFARKMcQGqzmgdniA8bUz-IdNhEjICmqoW5r_jYP6eYwRYolKRnRAXldqXQuAacA&submissionId=5e8ac610-a9d3-2316-5e83-be9b30b56c6f" role="linkedinprofile" target="_blank">
+			 <img src="img/iconfinder_square-linkedin_317725.png" height="30px" width="30px" alt="link to linkedin"></img></a>
+		 </div>
+	 </footer>
+
+
+	 <p>Hello World</p>
+	 <a href="/Users/kaieppler/Documents/Bewerbung/Lebenslauf Eppler.pdf" target="_blank">Show my CV</a>
+	 <h1 id="about">About</h1>
+	 <p>
+		 <form action="/login-form-action" method="post">
+	   <label for="email">E-mail:</label>
+	   <input type="email" id="email" name="user_email">
+	   <button type="submit">Register</button>
+	 </form>
+
+ <a href="#">Default Link</a>
+ <button type="button">Default Button</button>
+ <button class="button__secondary">Secondary Button</button>
+ <br>
+ <br>
+ <br>
+
+ <script src="js/tota11y.min.js"></script>
+ </body>
+ </html>

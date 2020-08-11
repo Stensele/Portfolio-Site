@@ -1,0 +1,336 @@
+
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+
+  body {
+    background-color: #2b2b2b;
+    }*/
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #357b70; /*dark green*/
+      --secondary-color: #e0b354;/*orange*/
+      --dark-grey: #2b2b2b;
+      --light-grey: #d3d3d3;
+      --visited-color: #997379;
+      --hover-color: #00b2b2;
+      --active-color: #489c79;
+      --button-text: #ffffff;
+      --black-opacity: rgba(0, 0, 0, 0.3);
+      --fontweight_h1-h3: 700;
+
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+  /* Sets the font size to 16px */
+      line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+      font-variant: small-caps;
+      /*background-color: #2b2b2b;*/
+      background: radial-gradient(#E0F8F1 10%, #CEECF5 0 12%, transparent 10%),repeating-conic-gradient(#E0F8F1 0 15deg , #CEECF5 0 40deg);
+  border-radius: 0;
+    }
+
+    .page-header {
+      display: flex;
+      width: 100%;
+      padding: 20px;
+      border-bottom: 2px solid lightblue;
+
+    }
+
+    .page-header__item {
+  flex: 0 1 200px;
+
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list li .navigation-list__item--active {
+    text-decoration: none;
+  }
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {                   /* or: from */
+    fill: #fcffad;
+  }
+  100% {                  /* or: to */
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+/*this is short for:
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+} */
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 1s cloud-move infinite alternate ease-in;
+}
+/*this is short for:
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}/*
+/* Grid fallback*/
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 1s cloud-move-reverse infinite alternate ease;
+}
+
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+
+/* Styling CSS grid*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* flex unit*/
+  /*grid-template-columns: 300px 300px 300px;*/ /*fixed size*/
+  /*grid-template-rows: 300px 300px;*/ /*--> not needed, defaults to "auto"*/
+  grid-gap: 20px;
+}
+
+.grid__item {
+  background-color: var(--light-grey);
+  padding: 30px;
+  width: auto;
+}
+
+.grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+  }
+/*same as:*/
+/*  {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}*/
+
+h1 {
+  font-size: 30px;
+  font-weight: var(--fontweight_h1-h3);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--fontweight_h1-h3);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--fontweight_h1-h3);
+}
+
+a: {
+  color: var(--primary-color);
+}
+
+a:visited {
+  /*visited link*/
+  color: var(--visited-color);
+}
+
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+  color: var(--hover-color);
+}
+
+a:active {
+  /* selected link */
+  color: var(--active-color);
+}
+
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--primary-color);
+  color: var(--button-text);
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid var(--black-opacity);
+}
+button:hover, button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: var(--secondary-color);
+  color: var(--dark-grey);
+}
+
+
+
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+  }
+
+.profile__portrait {
+    /*float: left;*/
+    width: 250px;
+    height: auto;
+    padding-top: 20px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+.profile__item {
+  flex-direction: column;
+  text-align: center;
+}
+
+.page-footer {
+  /*clear: both;*/
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+/*flex layout only affects it's immediate children, so since the social media link are
+inside another div, they are not affected by the flex layout on the footer*/
+
+.about-section {
+text-align: center;
+}
+
+.about-section__ulist {
+padding: 0;
+list-style: none;
+display: grid;
+justify-content: center;
+grid-column: 1fr
+}
+
+.about-section__ulist__item {
+/*grid-column: 1fr;*/
+}
+
+.button, button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: var(--primary-color);
+  color: var(--button-text);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid var(--black-opacity);
+  transition: 0.2s opacity;
+  /*same as:
+  transition-duration: 0,2s;
+  transition-property: opacity;*/
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  font-size: 115%;
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
