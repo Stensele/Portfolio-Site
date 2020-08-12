@@ -34,9 +34,10 @@ Secondary Color (Orange): #e0b354;
       line-height: 1.6;
   /* Sets the line-height to 1.6 */
       font-variant: small-caps;
-      /*background-color: #2b2b2b;*/
-      background: radial-gradient(#E0F8F1 10%, #CEECF5 0 12%, transparent 10%),repeating-conic-gradient(#E0F8F1 0 15deg , #CEECF5 0 40deg);
-  border-radius: 0;
+      background-color: #f7f7f7;
+      /*background: radial-gradient(#E0F8F1 10%, #CEECF5 0 12%, transparent 10%),repeating-conic-gradient(#E0F8F1 0 15deg , #CEECF5 0 40deg);
+  border-radius: 0;*/
+
     }
 
     .page-header {
